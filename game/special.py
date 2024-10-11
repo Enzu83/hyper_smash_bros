@@ -10,7 +10,7 @@ class Electric_Ball(pygame.sprite.Sprite):
     def __init__(self, player):
         super().__init__()
         self.name = 'electric_ball'
-        self.image = pygame.image.load(f'sprites/{self.name}.png').convert_alpha()
+        self.image = pygame.image.load(f'sprites/miscellaneous/{self.name}.png').convert_alpha()
 
         self.x = player.x + player.hitbox_position[0] + player.hitbox[0]/2 - self.image.get_width()/2
         self.y = player.y + player.hitbox_position[1] + player.hitbox[1]/2 - self.image.get_height()/2
@@ -27,7 +27,7 @@ class Electric_Ball(pygame.sprite.Sprite):
         self.player = player
         self.on_wall = False
         self.rect = pygame.Rect((self.x , self.y), self.hitbox)
-        self.sound_hit = pygame.mixer.Sound('Sound_effects/sound_electric_s.ogg')
+        self.sound_hit = pygame.mixer.Sound('sounds/sfx/sound_electric_s.ogg')
 
     def collision(self, offset):
         collide = False
@@ -132,7 +132,7 @@ def special(self):
             if self.attack_frame == 25:
                 self.yspeed = -10
                 self.y -= 1
-                pygame.mixer.Sound('./Sound_effects/sound_attack_movement.ogg').play()
+                pygame.mixer.Sound('sounds/sfx/sound_attack_movement.ogg').play()
                 attacks.add(Attack((0, 3), (6, 50), (32, 32), 0, 2, 10, 8, self, ''))
             
             if self.attack_frame == 65:
@@ -194,7 +194,7 @@ def special(self):
             if self.attack_frame < 7:
                 self.yspeed /= 1.04
             if self.attack_frame == 7:
-                pygame.mixer.Sound('./Sound_effects/sound_slash_m.ogg').play()
+                pygame.mixer.Sound('sounds/sfx/sound_slash_m.ogg').play()
                 attacks.add(Attack((0, 3), (6, 50), (32, 32), 0, 2, 10, 8, self, ''))
                 self.y -= 1
             if self.attack_frame > 7:
@@ -306,7 +306,7 @@ def special(self):
                 self.attack_frame = 0
                 self.image_index = 0
 
-                pygame.mixer.Sound('Sound_effects/sound_instant_transmission.ogg').play()
+                pygame.mixer.Sound('sounds/sfx/sound_instant_transmission.ogg').play()
         
         #### SIDE SPECIAL ####
         elif self.special_attack == 'side_special':
@@ -395,7 +395,7 @@ def special(self):
                 self.y = int(self.tp_rect.y - self.hitbox_position[1])
                 self.tp_rect = pygame.rect.Rect(get_real_pos(self), self.hitbox)
 
-                self.image = pygame.image.load(f'animations/Pikachu/up_special/up_b_{self.direction[1]}_{self.direction[0]}.png').convert_alpha()
+                self.image = pygame.image.load(f'sprites/animations/Pikachu/up_special/up_b_{self.direction[1]}_{self.direction[0]}.png').convert_alpha()
 
             if self.attack_frame == 35:
                 self.invincibility_frame = 0
@@ -408,7 +408,7 @@ def special(self):
                 self.x = int(self.tp_rect.x - self.hitbox_position[0])
                 self.y = int(self.tp_rect.y - self.hitbox_position[1])
 
-                self.image = pygame.image.load(f'animations/Pikachu/up_special/up_b_{self.direction[1]}_{self.direction[0]}.png').convert_alpha()
+                self.image = pygame.image.load(f'sprites/animations/Pikachu/up_special/up_b_{self.direction[1]}_{self.direction[0]}.png').convert_alpha()
 
                 self.doing_special = False
                 

@@ -23,7 +23,7 @@ except ImportError:
 def game_training_options():
     for player in players:
         player.stock_number = -1
-    pygame.mixer.music.load("Music/music_training.ogg")
+    pygame.mixer.music.load("sounds/musics/music_training.ogg")
 
 
 def game_loop(character1, character2, stages, stage):
@@ -48,8 +48,8 @@ def game_loop(character1, character2, stages, stage):
         platforms.add(Platform((558, 306), 'platform'))
         ledges.add(Ledge((224, 384), 'left'))
         ledges.add(Ledge((224 + 512, 384), 'right'))
-        pygame.mixer.music.load("Music/music_bf.ogg")
-        background = pygame.image.load('./sprites/background.png')
+        pygame.mixer.music.load("sounds/musics/music_bf.ogg")
+        background = pygame.image.load('sprites/stages/background.png')
 
     elif stage == 'battlefield':
         walls.add(Wall((224, 384), 'wall'))
@@ -58,22 +58,22 @@ def game_loop(character1, character2, stages, stage):
         platforms.add(Platform((440, 228), 'platform'))
         ledges.add(Ledge((224, 384), 'left'))
         ledges.add(Ledge((224 + 512, 384), 'right'))
-        pygame.mixer.music.load("Music/music_bf.ogg")
-        background = pygame.image.load('./sprites/background.png')
+        pygame.mixer.music.load("sounds/musics/music_bf.ogg")
+        background = pygame.image.load('sprites/stages/background.png')
 
     elif stage == 'final_destination':
         walls.add(Wall((224, 384), 'wall'))
         ledges.add(Ledge((224, 384), 'left'))
         ledges.add(Ledge((224 + 512, 384), 'right'))
-        pygame.mixer.music.load("Music/music_fd.ogg")
-        background = pygame.image.load('./sprites/background.png')
+        pygame.mixer.music.load("sounds/musics/music_fd.ogg")
+        background = pygame.image.load('sprites/stages/background.png')
 
     elif stage == 'vogue_merry':
         walls.add(Wall((236, 384), 'platform_large'))
         ledges.add(Ledge((236, 384), 'left'))
         ledges.add(Ledge((236 + 488, 384), 'right'))
-        pygame.mixer.music.load("Music/music_vogue_merry.ogg")
-        background = pygame.image.load('./sprites/vogue_merry.png')
+        pygame.mixer.music.load("sounds/musics/music_vogue_merry.ogg")
+        background = pygame.image.load('sprites/stages/vogue_merry.png')
 
     pygame.mixer.music.play(loops=-1)
     #pygame.mixer.music.stop()
@@ -173,9 +173,9 @@ def game_loop(character1, character2, stages, stage):
 
         ########### PLAYER 1 PERCENT ###########
         screen.blit(pygame.image.load(
-            'sprites/percent_hud.png').convert_alpha(), (226, 450))
+            'sprites/miscellaneous/percent_hud.png').convert_alpha(), (226, 450))
         player_image = pygame.image.load(
-            f'./icon/icon_hud/icon_{player1.character}.png').convert_alpha()
+            f'sprites/hud_icons/icon_{player1.character}.png').convert_alpha()
         screen.blit(player_image, (226, 450))
         percent = str(player1.percent)
         for i in range(len(percent)):
@@ -184,9 +184,9 @@ def game_loop(character1, character2, stages, stage):
         screen.blit(font_percent[10], (387, 466))
 
         ########### PLAYER 2 PERCENT ###########
-        screen.blit(pygame.image.load('sprites/percent_hud2.png'), (542, 450))
+        screen.blit(pygame.image.load('sprites/miscellaneous/percent_hud2.png'), (542, 450))
         player_image = pygame.image.load(
-            f'./icon/icon_hud/icon_{player2.character}.png').convert_alpha()
+            f'sprites/hud_icons/icon_{player2.character}.png').convert_alpha()
         screen.blit(player_image, (542, 450))
         percent = str(player2.percent)
         for i in range(len(percent)):

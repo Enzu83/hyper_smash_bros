@@ -7,8 +7,8 @@ except ImportError:
 class Explosion(pygame.sprite.Sprite):
     def __init__(self, position):
         super().__init__()
-        self.image = pygame.image.load('sprites/explosion.png')
-        pygame.mixer.Sound('./Sound_effects/sound_explosion.ogg').play()
+        self.image = pygame.image.load('sprites/miscellaneous/explosion.png')
+        pygame.mixer.Sound('sounds/sfx/sound_explosion.ogg').play()
         self.frame = 20
         self.x, self.y = position
         while self.x < 0:

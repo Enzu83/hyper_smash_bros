@@ -84,7 +84,7 @@ def import_folder(path):
 
 def import_character_assets(self):
     name = self.character
-    character_path = './animations/' + name + '/'
+    character_path = 'sprites/animations/' + name + '/'
     self.animations = {'idle':[], 'walk':[],'dash':[], 'jump':[], 'fall':[], 'hit':[], 'f_tilt':[], 'down_air':[], 'up_tilt':[], 'neutral_special': [], 'up_special':[], 'side_special':[], 'ledgegrab': [], 'roll' :[], 'airdodge': [], 'shield':[],'grab':[] , 'boomerang': []}
 
     for animation in self.animations.keys():
@@ -93,9 +93,9 @@ def import_character_assets(self):
 
 ###################### DUST PARTICLES ######################
 
-run_particles = import_folder('./animations/dust_particles/run')
-jump_particles = import_folder('./animations/dust_particles/jump')
-land_particles = import_folder('./animations/dust_particles/land')
+run_particles = import_folder('sprites/animations/dust_particles/run')
+jump_particles = import_folder('sprites/animations/dust_particles/jump')
+land_particles = import_folder('sprites/animations/dust_particles/land')
 
 class ParticleEffect(pygame.sprite.Sprite):
     def __init__(self,pos,type, orientation):

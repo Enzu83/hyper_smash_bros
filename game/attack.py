@@ -26,8 +26,8 @@ class Attack(pygame.sprite.Sprite):
         self.damage = damage
         self.rect = pygame.Rect(window_size[0]+50,window_size[1]+50,1,1)
         self.player = player
-        self.sound_hit = pygame.mixer.Sound(f'./Sound_effects/{sound_hit}')
-        self.sound_move = pygame.mixer.Sound('./Sound_effects/sound_attack_movement.ogg')
+        self.sound_hit = pygame.mixer.Sound(f'sounds/sfx/{sound_hit}')
+        self.sound_move = pygame.mixer.Sound('sounds/sfx/sound_attack_movement.ogg')
 
 
     def draw_and_collision(self):
@@ -66,7 +66,7 @@ class Grab(pygame.sprite.Sprite):
         self.player = player
 
         self.rect = pygame.Rect((0, 0), (0, 0))
-        self.sound_move = pygame.mixer.Sound('./Sound_effects/sound_attack_movement.ogg')
+        self.sound_move = pygame.mixer.Sound('sounds/sfx/sound_attack_movement.ogg')
 
 
     def draw_and_collision(self):

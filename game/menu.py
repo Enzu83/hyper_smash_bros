@@ -1,16 +1,10 @@
-from random import randint
 import pygame
 import sys
 from math import cos
 from pygame.locals import *
-try:
-    from game.variables import *
-    from game.functions import best_ratio, add_path, cursor_width
-    from game.main import game_loop
-except ImportError:
-    from variables import *
-    from functions import best_ratio, add_path, cursor_width
-    from main import game_loop
+from game.variables import *
+from game.functions import best_ratio, add_path, cursor_width
+from game.main import game_loop
 
 ###########################
 # Initialization
@@ -23,17 +17,17 @@ clock = pygame.time.Clock()
 # Images
 images_list = dict()
 images_list['load_path'] = set()
-image_paths = ['menu', 'menu/select_screen']
+image_paths = ['sprites/menu', 'sprites/select_screen']
 add_path(images_list, image_paths)
 
 
 ###########################
 # Sound
-sound_title = pygame.mixer.Sound("sound_effects/sound_title.ogg")
-sound_button = pygame.mixer.Sound("sound_effects/sound_button.ogg")
-sound_back = pygame.mixer.Sound("sound_effects/sound_back.ogg")
-sound_start_fight = pygame.mixer.Sound("sound_effects/sound_start_fight.ogg")
-sound_select_menu = pygame.mixer.Sound("sound_effects/sound_select_menu.ogg")
+sound_title = pygame.mixer.Sound("sounds/sfx/sound_title.ogg")
+sound_button = pygame.mixer.Sound("sounds/sfx/sound_button.ogg")
+sound_back = pygame.mixer.Sound("sounds/sfx/sound_back.ogg")
+sound_start_fight = pygame.mixer.Sound("sounds/sfx/sound_start_fight.ogg")
+sound_select_menu = pygame.mixer.Sound("sounds/sfx/sound_select_menu.ogg")
 
 ###########################
 # Variables
@@ -108,7 +102,7 @@ while True:
         else:
 
             # Play music
-            pygame.mixer.music.load("Music/music_menu_b.ogg")
+            pygame.mixer.music.load("sounds/musics/music_menu_b.ogg")
             pygame.mixer.music.play(loops=-1)
 
             count = 0
@@ -337,7 +331,7 @@ while True:
                 ready_1 = True
                 if character_1 != 'Random':
                     pygame.mixer.Sound(
-                        f'Announcer/announcer_{character_1}.ogg').play()
+                        f'sounds/announcer/announcer_{character_1}.ogg').play()
         if keys[K_t] and ready_1:  # Deselect a character
             sound_back.play()
             ready_1 = False
@@ -398,7 +392,7 @@ while True:
                 ready_2 = True
                 if character_2 != 'Random':
                     pygame.mixer.Sound(
-                        f'Announcer/announcer_{character_2}.ogg').play()
+                        f'sounds/announcer/announcer_{character_2}.ogg').play()
         if keys[K_SEMICOLON] and ready_2:  # Deselect a character
             sound_back.play()
             ready_2 = False

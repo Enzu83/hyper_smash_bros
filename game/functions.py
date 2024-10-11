@@ -2,13 +2,7 @@ import pygame
 from math import exp
 from os import listdir
 from os.path import isfile, join, splitext
-
-from pygame.sprite import collide_rect
-
-try:
-    from game.variables import *
-except ImportError:
-    from variables import *
+from game.variables import *
 
 ################# GAME #################
 

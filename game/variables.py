@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 
 window_size = (960, 544)
-window_icon = pygame.image.load('./sprites/icon.png')
+window_icon = pygame.image.load('./sprites/miscellaneous/icon.png')
 screen = pygame.display.set_mode(window_size)
 
 ##### Menu #####
@@ -24,7 +24,7 @@ font_percent.append(pygame.image.load('font/percent.png').convert_alpha())
 
 
 
-background = pygame.image.load('./sprites/background.png')
+background = pygame.image.load('./sprites/stages/background.png')
 players = []
 walls = pygame.sprite.Group()
 platforms = pygame.sprite.Group()

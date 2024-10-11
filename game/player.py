@@ -53,7 +53,7 @@ class Player(pygame.sprite.Sprite):
 
         self.stock = global_stock_number
         self.stock_image = pygame.image.load(
-            f'icon/stock/stock_{character}.png')
+            f'sprites/stocks/stock_{character}.png')
 
         if self.character != 'The_Cube':
             self.hitbox = image_var[character]['hitbox']
@@ -68,7 +68,7 @@ class Player(pygame.sprite.Sprite):
             self.hitbox_position = [0, 0]
 
         self.shield_max_size = self.hitbox[0] + self.hitbox[1]
-        image_shield = pygame.image.load(f'./sprites/shield{player}.png')
+        image_shield = pygame.image.load(f'sprites/miscellaneous/shield{player}.png')
         self.image_shield = pygame.transform.scale(
             image_shield, (self.shield_max_size, self.shield_max_size))
         self.shield_size = self.shield_max_size
@@ -135,11 +135,11 @@ class Player(pygame.sprite.Sprite):
         if character != 'The_Cube':
             self.image = self.animations['fall'][0]
         else:
-            self.image = pygame.image.load('sprites/player.png')
+            self.image = pygame.image.load('sprites/miscellaneous/player.png')
 
         #### Offscreen image ####
         self.cursor = pygame.image.load(
-            f'sprites/offscreen_cursor{player}.png').convert_alpha()
+            f'sprites/miscellaneous/offscreen_cursor{player}.png').convert_alpha()
         self.draw_cursor = False
         self.x_cursor, self.y_cursor = (0, 0)
 
@@ -448,7 +448,7 @@ class Player(pygame.sprite.Sprite):
                     if self.shield_size > self.shield_max_size/3:
                         attack.sound_move.stop()
                         pygame.mixer.Sound(
-                            'Sound_effects/sound_shield_hit.ogg').play()
+                            'sounds/sfx/sound_shield_hit.ogg').play()
                     else:
                         attack.kill()
 
@@ -502,7 +502,7 @@ class Player(pygame.sprite.Sprite):
                 other.can_act = False
                 other.xspeed = 0
                 other.lag = global_grab_lag
-                pygame.mixer.Sound('./Sound_effects/sound_slap_m.ogg').play()
+                pygame.mixer.Sound('sounds/sfx/sound_slap_m.ogg').play()
 
     def check_shield(self):
         if self.key_shield and self.on_wall and self.can_act and self.is_shielding == False and self.is_attacking == False and self.grabbing_ledge == False and self.doing_special == False:
@@ -516,7 +516,7 @@ class Player(pygame.sprite.Sprite):
             self.shield_size -= 0.2
             if self.shield_size < self.shield_max_size/3:
                 pygame.mixer.Sound(
-                    'Sound_effects/sound_shield_break.ogg').play()
+                    'sounds/sfx/sound_shield_break.ogg').play()
                 self.shield_size = self.shield_max_size
                 self.hitstun = 120
                 self.yspeed = -6
@@ -590,7 +590,7 @@ class Player(pygame.sprite.Sprite):
                 elif self.key_up:
                     throw = 'up_throw'
 
-                pygame.mixer.Sound('Sound_effects/sound_launched_m.ogg').play()
+                pygame.mixer.Sound('sounds/sfx/sound_launched_m.ogg').play()
 
                 other = self.grab_player[1]
                 (xspeed,

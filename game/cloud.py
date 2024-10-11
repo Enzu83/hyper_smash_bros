@@ -13,7 +13,7 @@ except ImportError:
 class Cloud(pygame.sprite.Sprite):
     def __init__(self, player):
         super().__init__()
-        self.animation = import_folder('animations/cloud')
+        self.animation = import_folder('sprites/animations/cloud')
         self.image_index = 0
         self.image = self.animation[int(self.image_index)]
 
