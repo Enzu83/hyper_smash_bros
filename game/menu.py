@@ -215,28 +215,29 @@ while True:
                     sound_button.play()
             if event.type == KEYUP:  # Select
                 if event.key == K_a or event.key == K_RCTRL:
-                    state = 3 + (left + 2*up)
-                    count = 0
-                    count1 = 0
-                    count2 = 0
+                    if (left == 0 and up == 0): # Other menus are not done
+                        state = 3 + (left + 2*up)
+                        count = 0
+                        count1 = 0
+                        count2 = 0
 
-                    key_left_1 = False
-                    key_up_1 = False
-                    key_right_1 = False
-                    key_down_1 = False
+                        key_left_1 = False
+                        key_up_1 = False
+                        key_right_1 = False
+                        key_down_1 = False
 
-                    key_left_2 = False
-                    key_up_2 = False
-                    key_right_2 = False
-                    key_down_2 = False
+                        key_left_2 = False
+                        key_up_2 = False
+                        key_right_2 = False
+                        key_down_2 = False
 
-                    left_1 = 0
-                    up_1 = 0
-                    left_2 = 1
-                    up_2 = 0
+                        left_1 = 0
+                        up_1 = 0
+                        left_2 = 1
+                        up_2 = 0
 
-                    ready_1 = False
-                    ready_2 = False
+                        ready_1 = False
+                        ready_2 = False
 
                     sound_select_menu.play()
 
