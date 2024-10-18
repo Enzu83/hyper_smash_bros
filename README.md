@@ -5,7 +5,10 @@ This project is for educational purpose only.
 
 Projet réalisé pendant les Coding Weeks 2021 de CentraleSupélec.
 
-[![Video Title](https://img.youtube.com/vi/54JSfYjeWTA/0.jpg)](https://www.youtube.com/watch?v=54JSfYjeWTA)
+
+Lien vers la démo :
+
+[![Hyper Smash Bros](https://img.youtube.com/vi/54JSfYjeWTA/0.jpg)](https://www.youtube.com/watch?v=54JSfYjeWTA)
 
 ## Bibliothèques à importer
 
