@@ -5,7 +5,7 @@ This project is for educational purpose only.
 
 Projet réalisé pendant les Coding Weeks 2021 de CentraleSupélec.
 
-Lien vers la démo : https://www.youtube.com/watch?v=54JSfYjeWTA 
+[![Video Title](https://img.youtube.com/vi/54JSfYjeWTA/0.jpg)](https://www.youtube.com/watch?v=54JSfYjeWTA)
 
 ## Bibliothèques à importer
 
