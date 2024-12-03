@@ -1,40 +1,55 @@
 # Hyper Smash Bros
 
-The concept of the game is the property of Nintendo, HAL Laboratory, Sora Ltd. and Bandai Namco Games, so are also the sounds and the images.
-This project is for educational purpose only.
+School project realized during the 2021 Coding Weeks at CentraleSupélec.
 
-Projet réalisé pendant les Coding Weeks 2021 de CentraleSupélec.
-
-
-Lien vers la démo :
+Click to see the demo (November 2021):
 
 [![Hyper Smash Bros](https://img.youtube.com/vi/54JSfYjeWTA/0.jpg)](https://www.youtube.com/watch?v=54JSfYjeWTA)
 
-## Bibliothèques à importer
+## Game overview
 
-- pygame
+### Title screen
 
-## Instructions pour jouer
+![title_screen](https://github.com/user-attachments/assets/ec64fef3-eaa8-41f4-a985-7dd58e3a3dcf)
 
-- Lancer le fichier init.py
-- Selectionner le mode voulu :
-        - à l'aide de la touche A avec navigation avec ZQSD (pour le joueur 1)
-        - à l'aide de la touche CTRL droite avec navigation avec les flèches directionnelles (pour le joueur 2)
+### Main menu
 
-## Commandes
+![main_menu](https://github.com/user-attachments/assets/802a56b1-6bbc-4cff-bdbd-95b59e7cb7dc)
 
-- Joueur 1 :\
-        Movement - ZQSD\
-        Attack - E\
-        Jump - A\
-        Shield - F\
-        Grab - R\
-        Special - T
+### Character selection
 
-- Joueur 2 :\
-        Movement - flèches directionnelles\
-        Attack - CTRL droite\
-        Jump - SHIFT\
-        Grab - ENTER\
-        Shield - :\
-        Special - ;
+![character_selection](https://github.com/user-attachments/assets/8f690a87-9ddd-4ce1-8d99-551e6e6ceaaf)
+
+### In-game
+
+![in_game](https://github.com/user-attachments/assets/1f851a44-a9ef-458d-90e6-0f9e1603b168)
+
+## How to play the game
+
+- Make sure the library `pygame` is installed.
+- Execute the file `init.py`.
+
+## Controls (AZERTY Keyboard)
+
+### Player 1
+
+- Movement - `ZQSD`
+- Attack - `E`
+- Jump - `A`
+- Shield - `F`
+- Grab - `R`
+- Special - `T`
+
+### Player 2
+
+- Movement - `Arrow Keys`
+- Attack - `RCTRL`
+- Jump - `RSHIFT`
+- Grab - `RETURN`
+- Shield - `:`
+- Special - `;`
+
+## Side notes
+
+The concept of the game is the property of Nintendo, HAL Laboratory, Sora Ltd. and Bandai Namco Games, so are also the sounds and the images.
+This project is for educational purpose only.
