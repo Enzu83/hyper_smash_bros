@@ -3,22 +3,14 @@ import sys
 from random import randint
 from pygame.locals import *
 
-try:
-    from game.variables import *
-    from game.wall import *
-    from game.ledge import *
-    from game.player import *
-    from game.platforms import *
-    from game.explosion import *
-    from game.victory import *
-except ImportError:
-    from variables import *
-    from wall import *
-    from player import *
-    from platforms import *
-    from explosion import *
-    from ledge import *
-    from victory import *
+from game.variables import *
+from game.wall import *
+from game.ledge import *
+from game.player import *
+from game.platforms import *
+from game.explosion import *
+from game.victory import *
+
 
 def game_training_options():
     for player in players:
@@ -205,6 +197,8 @@ def game_loop(character1, character2, stages, stage):
             victory(winner, [player for player in players if player != winner])
 
         """
+        # OLD CODE #
+        
         if player1.stock_number == 0:
             winner = 2
             game = False
@@ -309,9 +303,3 @@ def game_loop(character1, character2, stages, stage):
             pass
             #victory(winner,name1,name2)
         """
-
-
-if __name__ == '__main__':
-    game_loop('Goku', 'Luffy', stages, 'vogue_merry')
-    pygame.quit()
-    sys.exit()
