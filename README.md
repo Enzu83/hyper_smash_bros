@@ -1,8 +1,9 @@
 # Hyper Smash Bros
 
-School project realized during the 2021 Coding Weeks at CentraleSupélec.
+Hyper Smash Bros. was originally a 2-weeks school game project made during the 2021 Coding Weeks at CentraleSupélec.
+It was then completely remade using the same libraries and assets.
 
-Click to see the demo (November 2021):
+Click here to see the demo after 2 weeks (November 2021):
 
 [![Hyper Smash Bros](https://img.youtube.com/vi/54JSfYjeWTA/0.jpg)](https://www.youtube.com/watch?v=54JSfYjeWTA)
 
@@ -26,30 +27,29 @@ Click to see the demo (November 2021):
 
 ## How to play the game
 
-- Make sure the library `pygame` is installed.
-- Execute the file `init.py`.
+- Make sure the python library `pygame` is installed
+- Execute `init.py`
 
 ## Controls (AZERTY Keyboard)
 
 ### Player 1
 
-- Movement - `ZQSD`
-- Attack - `E`
-- Jump - `A`
-- Shield - `F`
-- Grab - `R`
-- Special - `T`
+- `Movement`: ZQSD
+- `Attack`: E
+- `Jump`: A
+- `Shield`: F
+- `Grab`: R
+- `Special`: T
 
 ### Player 2
 
-- Movement - `Arrow Keys`
-- Attack - `RCTRL`
-- Jump - `RSHIFT`
-- Grab - `RETURN`
-- Shield - `:`
-- Special - `;`
+- `Movement`: Arrow Keys
+- `Attack`: RCTRL
+- `Jump`: RSHIFT
+- `Grab`: RETURN
+- `Shield`: COLON
+- `Special`: SEMI-COLON
 
 ## Side notes
 
 The concept of the game is the property of Nintendo, HAL Laboratory, Sora Ltd. and Bandai Namco Games, so are also the sounds and the images.
-This project is for educational purpose only.
